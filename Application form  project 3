@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 30px;
+    }
+    .form-container {
+      background: white;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-container h2 {
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Application Form</h2>
+  <form id="applicationForm">
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+      <div class="error" id="nameError"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <div class="error" id="emailError"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" required>
+      <div class="error" id="phoneError"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select id="gender" required>
+        <option value="">--Select--</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="message">Why are you applying?</label>
+      <textarea id="message" rows="4"></textarea>
+    </div>
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('applicationForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let valid = true;
+    let name = document.getElementById('name').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let phone = document.getElementById('phone').value.trim();
+
+    document.getElementById('nameError').textContent = '';
+    document.getElementById('emailError').textContent = '';
+    document.getElementById('phoneError').textContent = '';
+
+    if (name.length < 3) {
+      document.getElementById('nameError').textContent = 'Name must be at least 3 characters.';
+      valid = false;
+    }
+
+    if (!email.includes('@')) {
+      document.getElementById('emailError').textContent = 'Enter a valid email.';
+      valid = false;
+    }
+
+    if (phone.length < 10 || isNaN(phone)) {
+      document.getElementById('phoneError').textContent = 'Enter a valid phone number.';
+      valid = false;
+    }
+
+    if (valid) {
+      alert('Form submitted successfully!');
+      form.reset();
+    }
+  });
+</script>
+
+</body>
+</html>

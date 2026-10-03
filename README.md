@@ -1,12 +1,25 @@
-- 👋 Hi, I’m @Krishnakumayadav
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+# Hi, I'm Krishna Yadav 👋
 
-<!---
-Krishnakumayadav/Krishnakumayadav is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+🎓 B.Tech Computer Science & Engineering Student
+
+💻 Interested in Software Development, Web Development & Cloud Technologies
+
+🌱 Currently learning Java, Python, Web Development & AWS
+
+🚀 I enjoy building projects and learning new technologies.
+
+## 🛠️ Technologies
+
+- Java
+- Python
+- HTML
+- CSS
+- JavaScript
+- SQL
+- Git & GitHub
+- AWS
+- 
+## 📌 Featured Projects
+- Clothing E-Commerce Website
+- Java Programming Projects
+- Web Development Projects
